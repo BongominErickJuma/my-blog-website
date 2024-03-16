@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+<div class="px-4 py-5 my-5">
+  <h1 class="display-5 text-primary col-lg-6 mx-auto text-primary">
+    Welcome to My Blog!
+  </h1>
+  <div class="col-lg-6 mx-auto">
+    <h2>Instructions</h2>
+    <p>Welcome to my blog platform! Here's what you can do:</p>
+    <ul>
+      <li>
+        Create Blogs: You can create a new blog by navigating to the Create
+        page. Simply provide a title and content for your blog post.
+      </li>
+      <li>
+        Delete Blogs: If you no longer need a blog post, you can delete it. On
+        the home page, each blog post has a delete button that allows you to
+        remove it.
+      </li>
+      <li>
+        Edit Blogs: Made a mistake or want to update your blog post? You can
+        edit the content of your existing blogs. Simply click the edit button
+        next to the blog post you want to modify, make your changes, and save
+        them.
+      </li>
+      <li>Feel free to explore and enjoy reading our blogs!</li>
+    </ul>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-start my-5">
+      <button type="button" class="btn btn-outline-primary btn-lg px-4 gap-3">
+        <a class="nav-link" href="/create">Create Blog</a>
+      </button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+        <a class="nav-link" href="/blogs">View Blogs</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

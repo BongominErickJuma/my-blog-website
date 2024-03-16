@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<div class="px-4 py-5 my-5">
+  <h1 class="display-5 col-lg-6 mx-auto text-primary">All Blogs</h1>
+
+  <div class="col-lg-6 mx-auto">
+    <% if (blogs.length > 0) { %>
+    <a class="nav-link text-primary link-secondary" href="/create">New Blog</a>
+    <% blogs.forEach(blog => { %>
+    <div class="card mt-5">
+      <p class="card-header"><%= blog.id %></p>
+      <div class="card-body">
+        <h5 class="card-title"><%= blog.title %></h5>
+        <p class="card-text"><%= blog.body.slice(0, 100) + "..." %></p>
+        <a href="/blogs/<%= blog.id %>" class="btn btn-outline-primary"
+          >View Blog</a
+        >
+      </div>
+    </div>
+    <% }) %> <% } else { %>
+    <p>There are no blogs to display...</p>
+    <a class="nav-link text-primary link-secondary" href="/create"
+      >create new blog</a
+    >
+    <% } %>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

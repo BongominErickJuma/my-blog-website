@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+
+<div class="px-4 py-5 my-5">
+  <div class="col-lg-6 mx-auto">
+    <form action="/blogs/<%= blog.id %>/edit" method="post">
+      <h2 class="h3 mb-3 fw-normal text-primary mt-10">Edit Blog</h2>
+      <div class="form-floating">
+        <input
+          class="form-control my-5"
+          value="<%= blog.title %>"
+          type="text"
+          name="title"
+          id="body"
+          required
+        />
+        <label for="body">Blog Title:</label>
+      </div>
+      <div class="form-floating">
+        <textarea
+          class="form-control my-5"
+          id="body"
+          name="body"
+          style="height: 10rem"
+          required
+        >
+<%= blog.body %></textarea
+        >
+        <label for="body">Blog Body:</label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Edit</button>
+    </form>
+  </div>
+</div>
+<%- include("partials/footer.ejs") %>
